@@ -1,0 +1,71 @@
+*{
+        margin: 0;
+        padding: 0;
+}
+html{
+        font-size: 15px;
+}
+body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+}
+form[method='post']{
+        display: flex;
+        flex-direction: column;
+}
+input, select{
+        margin: .5rem 0;
+        font-size: 2rem;
+        text-align: center;
+        border-radius: .5rem;
+        padding: .25rem;
+        border: 3px solid rgba(102, 102, 111, 0.5);
+        outline: none;
+        transition: all ease .3s;
+}
+.area{
+        padding: 3rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 30px rgba(0,0,0,.12);
+        border: 2px #fff solid;
+        background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#f4f4f5));
+}
+input[type='text']:focus, select:focus{
+        border: rgba(111, 111, 255, 0.5) 3px solid;
+        box-shadow: rgba(111, 111, 255, 0.5) 0 0 9px;
+}
+h1{
+        font-weight: lighter;
+        font-size: 3rem;
+        color: #001447;
+}
+option{
+        font-weight: bolder;
+}
+input[type='submit']{
+        color: #fff;
+        font-weight: bolder;
+        font-size: 1.25rem;
+        background-color: #69d800;
+        border: none;
+        box-shadow: #459700 0 5px;
+        transition: all ease .1s;
+        margin: .5rem auto;
+        padding: .25rem .5rem;
+        /*align-self: flex-end;*/
+}
+input[type='submit']:active{
+        transform: translateY(5px);
+        box-shadow: 0 0;
+}
+.toShowPage, .toAddPage{
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+        text-decoration: none;
+
+}

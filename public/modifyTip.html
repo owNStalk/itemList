@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+                *{
+                        margin: 0;
+                        padding: 0;
+                }
+                html{
+                        font-size: 15px;
+                }
+                img{
+                        width: 9rem;
+                }
+                .tipCard{
+                        background-color: #D6FFCC;
+                        display: table;
+                        margin: 3rem auto;
+                        padding: 1rem 3.5rem;
+                        border: .25rem solid #0C860C;
+                        border-radius: 1rem;
+                }
+                .cardContent{
+                        display: flex;
+                        align-items: center;
+                }
+                .tipContent{
+                        display: flex;
+                        flex-direction: column;
+                }
+                .tipTitle{
+                        font-size: 2rem;
+                        font-weight: bolder;
+                        color: #228219;
+                }
+                a{
+                        text-decoration: none;
+                        color: #23BD23;
+                        font-size: 1.5rem;
+                }
+                img, .tipContent{
+                        margin: .75rem;
+                }
+                span, a{
+                        padding: .25rem 0;
+                }
+        </style>
+</head>
+<body>
+<div class="tipCard">
+        <div class="cardContent">
+                <img src="./images/check.png" alt="" srcset="">
+                <div class="tipContent">
+                        <span class="tipTitle"><%= msg %>成功</span>
+                        <a href="javascript:">点击此处可查看<%= msg %>结果</a>
+                </div>
+        </div>
+</div>
+</body>
+</html>

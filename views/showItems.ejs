@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>showItems</title>
+    <link rel="stylesheet" href="/stylesheets/showItems.css">
+</head>
+<body>
+<% data.forEach(item => { %>
+<div class="itemCard <%= item.type %>">
+    <div class="left">
+        <span class="title"><%= item.itemName %></span>
+        <span>Type: <%= item.type %></span>
+        <span>Tier: <%= item.tier %></span>
+        <span>Cost: <%= item.cost %></span>
+    </div>
+    <div class="right">
+        <a href="/updateItem/<%= item._id %>" class="edit">🖊</a>
+        <a href="/delItem/<%= item._id %>" class="remove">×</a>
+    </div>
+</div>
+<% }) %>
+<script>
+        const removes = document.querySelectorAll('.remove')
+        removes.forEach(item => {
+                //Add event listen
+                item.addEventListener('click', e => {
+                        if (confirm('Confirm delete?')) {
+                                return true
+                        } else {
+                                e.preventDefault()
+                        }
+                })
+        })
+</script>
+</body>
+</html>

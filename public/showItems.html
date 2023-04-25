@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+                *{
+                        margin: 0;
+                        padding: 0;
+                }
+                html{
+                        font-size: 15px;
+                }
+                body{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        height: 100vh;
+                        flex-direction: column;
+                }
+                .itemCard{
+                        background-color: #ECECEC;
+                        padding: 1.5rem;
+                        border-radius: .25rem;
+                        box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px,
+                        rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
+                        rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
+                        display: flex;
+                        align-items: center;
+                        margin: .75rem 0;
+                }
+                span{
+                        display: block;
+                        font-size: 1.75rem;
+                        font-weight: lighter;
+                }
+                .title{
+                        font-size: 3rem;
+                        font-weight: lighter;
+                }
+                .left{
+                        text-align: left;
+                }
+                a{
+                        text-decoration: none;
+                        color: #fff;
+                        font-weight: bolder;
+                        font-size: 1.25rem;
+                        width: 5rem;
+                        line-height: 2rem;
+                        margin: .5rem 0;
+                        border-radius: .25rem;
+                        transition: all ease .1s;
+                }
+                .right{
+                        display: flex;
+                        flex-direction: column;
+                }
+                a:nth-of-type(1){
+                        background-color: orange;
+                        box-shadow: #b97800 0 5px,
+                        rgba(0, 0, 0, 0.4) 0 2px 4px,
+                        rgba(0, 0, 0, 0.3) 0 7px 13px -3px;
+                }
+                a:nth-of-type(2){
+                        background-color: orangered;
+                        box-shadow: #c03500 0 5px,
+                        rgba(0, 0, 0, 0.4) 0 2px 4px,
+                        rgba(0, 0, 0, 0.3) 0 7px 13px -3px;
+                }
+                a:active{
+                        transform: translateY(5px);
+                        box-shadow: 0 0;
+                }
+                .left, .right{
+                        padding: 1rem;
+                }
+                
+                .AbilityTheme{
+                        background-color: #0069d8;
+                        box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px,
+                        rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
+                        #004c9c 0 -3px 0 inset;
+                        color: #fff;
+                }
+                .WeaponTheme{
+                        background-color: #ff6161;
+                        box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px,
+                        rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
+                        #823232 0 -3px 0 inset;
+                        color: #fff;
+                }
+                .DefenseTheme{
+                        background-color: #12d900;
+                        box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px,
+                        rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
+                        #0e9900 0 -3px 0 inset;
+                        color: #fff;
+                }
+                .UtilityTheme{
+                         background-color: #5d00ba;
+                         box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px,
+                         rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
+                         #30005f 0 -3px 0 inset;
+                         color: #fff;
+                 }
+        </style>
+</head>
+<body>
+<div class="itemCard">
+        <div class="left">
+                <span class="title">Aftershock</span>
+                <span>Type: Ability</span>
+                <span>Tier: 3</span>
+                <span>Cost: 2600</span>
+        </div>
+        <div class="right">
+                <a href="javascript:">🖊</a>
+                <a href="javascript:">×</a>
+        </div>
+</div>
+</body>
+</html>

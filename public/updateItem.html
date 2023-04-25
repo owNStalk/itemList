@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>updateItem</title>
+</head>
+<body>
+<div class="area">
+        <h1>Item info update table</h1>
+        <form action="/addResult" method="post">
+                <input type="text" name="itemName" placeholder="Pls input item name." required>
+                <select name="type" required>
+                        <option value="" selected disabled hidden>Pls select item type.</option>
+                        <option value="Ability">Ability</option>
+                        <option value="Weapon">Weapon</option>
+                        <option value="Defense">Defense</option>
+                        <option value="Utility">Utility</option>
+                </select>
+                <select name="tier" required>
+                        <option value="" selected disabled hidden>Pls select item tier.</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                </select>
+                <input type="number" name="cost" placeholder="Pls input item cost." required>
+                <input type="submit" value="Submit">
+        </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>updateItem</title>
+        <link rel="stylesheet" href="/stylesheets/addItem.css">
+</head>
+<body>
+<div class="area">
+        <h1>Item info update table</h1>
+        <form action="/updateResult/<%= data._id %>" method="post">
+                <input type="text" name="itemName" placeholder="Pls input item name." required value="<%= data.itemName %>">
+                <select name="type" required>
+                        <option value="Ability" class="type">Ability</option>
+                        <option value="Weapon" class="type">Weapon</option>
+                        <option value="Defense" class="type">Defense</option>
+                        <option value="Utility" class="type">Utility</option>
+                </select>
+                <select name="tier" required>
+                        <option value="1" class="tier">1</option>
+                        <option value="2" class="tier">2</option>
+                        <option value="3" class="tier">3</option>
+                </select>
+                <input type="number" name="cost" placeholder="Pls input item cost." required value="<%= data.cost %>">
+                <input type="submit" value="Submit update">
+        </form>
+</div>
+<script>
+        //使用JSON.parse将传递过来的文档数据转换为对象
+        let data = JSON.parse('<%- JSON.stringify(data) %>')
+        //获取文档type字段值
+        let currentType = data.type
+        //通过类名获取所有的类型选项
+        let typeOptions = document.querySelectorAll('.type')
+        for (let i = 0; i < typeOptions.length; i++){
+                //如果当前的选项value属性值为获取到的type字段值
+                if (typeOptions[i].value === currentType) {
+                        //设置当前选项为选中状态
+                        typeOptions[i].selected = true
+                }
+        }
+        //获取文档tier字段值
+        let currentTier = data.tier
+        //通过类名获取所有的等级选项
+        let tierOptions = document.querySelectorAll('.tier')
+        //如果当前的选项value属性值为获取到的tier字段值
+        if (currentTier === Number(tierOptions[currentTier - 1].value)){
+                //设置当前选项为选中状态
+                tierOptions[currentTier - 1].selected = true
+        }
+</script>
+</body>
+</html>
