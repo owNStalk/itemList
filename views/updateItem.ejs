@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="/stylesheets/addItem.css">
 </head>
 <body>
+<a href="/showItems" class="toShowPage">Back to show page.</a>
 <div class="area">
         <h1>Item info update table</h1>
         <form action="/updateResult/<%= data._id %>" method="post">
@@ -22,7 +23,7 @@
                         <option value="3" class="tier">3</option>
                 </select>
                 <input type="number" name="cost" placeholder="Pls input item cost." required value="<%= data.cost %>">
-                <input type="submit" value="Submit update">
+                <input type="submit" value="Update" class="update">
         </form>
 </div>
 <script>

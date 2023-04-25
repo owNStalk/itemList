@@ -104,3 +104,21 @@ a:active{
         #30005f 0 -3px 0 inset;
         color: #fff;
 }
+.toAddPage{
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        background-color: royalblue;
+        padding: .5rem 1rem;
+        border-radius: .5rem;
+        box-shadow: #253c81 0 5px;
+        width: auto;
+}
+.toAddPage:active{
+         transform: translateY(5px);
+         box-shadow: 0 0;
+ }
